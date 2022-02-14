@@ -3,8 +3,8 @@ import { AdvertisementListController } from "./AdvertisementListController.js"
 
 
 
-domContentLoadedListener(() => {
+domContentLoadedListener(async() => {
     const advertisementsListElement = document.querySelector('.addvertisementList');
     const adListController = new AdvertisementListController(advertisementsListElement);
-    adListController.displayAdvertisments();
-})
+    await adListController.displayAdvertisments();
+});

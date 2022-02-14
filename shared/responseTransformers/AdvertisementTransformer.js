@@ -8,7 +8,8 @@ export function transformAdvertisement(advertisement) {
         priceUnit: advertisement.priceUnit,
         forSale: advertisement.forSale,
         description: advertisement.description,
+        longDescription: advertisement.longDescription,
         image: advertisement.photo ||
-            "https://www.logocrea.com/wp-content/uploads/2012/12/twitter.png",
+            "https://www.apconetforum.org/eweb/images/DEMO1/notavailable.jpg",
     }
 }
