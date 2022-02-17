@@ -16,3 +16,24 @@ export function removeSpinner(nodeElement) {
     const loader = nodeElement.querySelector(".loader");
     loader.remove();
 }
+
+export function onAnyInputChanges(formNodeElement) {
+    if (formNodeElement) {
+        const inputElements = Array.from(formNodeElement.querySelectorAll('input'));
+        inputElements.forEach((input) => {
+            input.addEventListener('input', () => {
+                checkIfAllInputsAreFilled(inputElements, formNodeElement)
+            });
+        });
+    }
+}
+
+function checkIfAllInputsAreFilled(inputElements, formNodeElement) {
+    const areAllInputsFilled = inputElements.every((inputElement) => inputElement.value);
+    const buttonElement = formNodeElement.querySelector("button");
+    if (areAllInputsFilled) {
+        buttonElement.removeAttribute("disabled");
+    } else {
+        buttonElement.setAttribute("disabled", "");
+    }
+}
