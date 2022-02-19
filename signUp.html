@@ -7,22 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./shared/spinner/spinner.css" />
     <link rel="stylesheet" href="./shared/notification/notification.css" />
-    <link rel="stylesheet" href="./general-styles.css">
+    <link rel="stylesheet" href="./styles/general-styles.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/global.css">
+
 
     <title>Registro</title>
 </head>
 
 <body>
-    <header>
+    <header class="common-header">
+        <a href="/" class="home-link">
+            <h1>HOME</h1>
+        </a>
         <ul>
-            <li><a href="/">HOME </a></li>
         </ul>
     </header>
     <section class="notification"></section>
 
     <main>
         <div class="notification"></div>
-        <section class="signup">
+        <section class="formElement">
             <form id="signupForm">
                 <div>
                     <label for="textInput">Usuario: </label>

@@ -1,0 +1,27 @@
+.common-header {
+    display: flex;
+    background-color: #030328;
+    align-items: center;
+    height: 4rem;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+
+.common-header ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.common-header a {
+    text-decoration: none;
+    color: #9e86ff;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.common-header a:hover,
+.common-header a:active {
+    color: white;
+}

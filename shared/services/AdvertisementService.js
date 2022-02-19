@@ -43,7 +43,7 @@ class AdvertisementService {
         }
 
         if (!httpResponse.ok) {
-            throw new Error(`Anuncio no encontrado. Status => ${httpResponse.status}`);
+            throw new Error(`Anuncio no encontrado.`);
         }
 
         try {

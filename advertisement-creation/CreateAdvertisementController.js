@@ -1,7 +1,7 @@
 import AdvertisementService from "../shared/services/AdvertisementService.js";
 import { userService } from "../shared/services/UserService.js";
 import { decodeToken } from "../shared/utils/decodeToken.js";
-import { onAnyFormElementChanges, publishErrorNotification, publishSuccessNotification } from "../shared/utils/utils.js";
+import { displaySpinner, onAnyFormElementChanges, publishErrorNotification, publishSuccessNotification, removeSpinner } from "../shared/utils/utils.js";
 
 export class CreateAdvertisementController {
     constructor(createAdvertismentFormElement) {
@@ -51,11 +51,17 @@ export class CreateAdvertisementController {
     }
 
     async createAdvertisement(body) {
+        const buttonElement = this.createAdvertismentFormElement.querySelector("button");
+        buttonElement.classList.add("hidden");
+        displaySpinner(this.createAdvertismentFormElement);
         try {
             await AdvertisementService.createAdvertisment(body);
             publishSuccessNotification('Anuncio creado correctamente', () => { location.href = '/' });
         } catch (error) {
             publishErrorNotification(error)
+        } finally {
+            removeSpinner(this.createAdvertismentFormElement);
+            buttonElement.classList.remove("hidden");
         }
     }
 }

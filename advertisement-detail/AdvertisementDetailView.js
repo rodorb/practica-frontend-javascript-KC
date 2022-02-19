@@ -7,11 +7,11 @@ export function buildAdvertisementDetailView(advertisement) {
     <div>
         <img style="height: 20rem;" src="${advertisement.image}"></img>
         <div> 
-            <h2>${advertisement.name}</h2>
-            <p>${advertisement.description}</p>
-            <p>${advertisement.longDescription}</p>
-            <p>${advertisement.price} ${advertisement.priceUnit}</p>
-            <p>${advertisement.forSale ? "Venta":"Compra"}</p>
+            <h1>${advertisement.name}</h1>
+            <p><strong>Descripción general:</strong> ${advertisement.description}</p>
+            <p><strong>Detalle del producto:</strong> ${advertisement.longDescription}</p>
+            <p><strong>Precio:</strong> ${advertisement.price} ${advertisement.priceUnit}</p>
+            <p>${advertisement.forSale ? "<strong>En Venta</strong>":"<strong>Se Compra</strong>"}</p>
         </div>
     </div>
     `

@@ -1,0 +1,20 @@
+:root {
+    --common-header-size: 5rem;
+    --footer-size: 100%;
+}
+
+* img {
+    border-radius: 0.5rem;
+}
+
+body {
+    background-color: lightblue;
+    background-size: cover;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    padding-top: 4rem;
+}

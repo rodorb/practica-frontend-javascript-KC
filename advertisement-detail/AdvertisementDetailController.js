@@ -24,7 +24,7 @@ export class AdvertisementDetailController {
             this.advertisementDetailElement.appendChild(advertisementElement);
             this.handleDeleteButton();
         } catch (error) {
-            publishErrorNotification(error);
+            publishErrorNotification(error, () => { location.href = '/'; });
         } finally {
             removeSpinner(this.advertisementDetailElement);
         }

@@ -13,9 +13,9 @@ function buildAdvertisementThumbnailView(advertisement) {
     //compra o venta.
     //TODO: construir mejor el html y estilos
     return `
-    <div>
-        <img style="height: 6rem;" src="${advertisement.image}"></img>
-        <div> 
+    <div class="advertisement-item">
+        <img src="${advertisement.image}"></img>
+        <div class="advertisement-item-text "> 
             <h2>${advertisement.name}</h2>
             <p>${advertisement.description}</p>
             <p>${advertisement.price} ${advertisement.priceUnit}</p>

@@ -1,0 +1,40 @@
+.addvertisementList {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem 2rem 0rem 2rem;
+    flex-wrap: wrap;
+}
+
+.advertisement-container {
+    background-color: #9e86ff;
+    height: 22rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    width: 14rem;
+    border-radius: 0.5rem;
+}
+
+.advertisement-container a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.advertisement-container a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.advertisement-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.advertisement-item img {
+    height: 8rem;
+    width: 100%;
+}
+
+.advertisement-item-text {
+    margin-left: 1rem;
+}

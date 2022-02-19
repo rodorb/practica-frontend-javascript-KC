@@ -18,12 +18,13 @@ export function publishSuccessNotification(message, callbackFn = null) {
 export function displaySpinner(nodeElement) {
     const spinnerTemplate = buildSpinnerView();
     const spinnerElement = document.createElement('div');
+    spinnerElement.setAttribute('id', 'spinner-container');
     spinnerElement.innerHTML = spinnerTemplate;
     nodeElement.appendChild(spinnerElement);
 }
 
 export function removeSpinner(nodeElement) {
-    const loader = nodeElement.querySelector(".loader");
+    const loader = nodeElement.querySelector("#spinner-container");
     loader.remove();
 }
 

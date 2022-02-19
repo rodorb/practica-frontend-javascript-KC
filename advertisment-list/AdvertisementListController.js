@@ -16,12 +16,12 @@ export class AdvertisementListController {
                     const advertisementDivElement = document.createElement('div');
                     const advertisementTemplate = buildAdvertisementView(advertisement);
                     advertisementDivElement.innerHTML = advertisementTemplate;
+                    advertisementDivElement.classList.add("advertisement-container");
                     this.advertisementsElement.appendChild(advertisementDivElement);
                 });
             } else {
                 publishErrorNotification('No existen anuncios disponibles.');
             }
-            console.log(advertisementsList);
         } catch (error) {
             publishErrorNotification('Se ha producido un error al recuperar anuncios.');
         } finally {
