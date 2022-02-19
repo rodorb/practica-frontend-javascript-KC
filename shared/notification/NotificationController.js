@@ -9,12 +9,18 @@ export class NotificationController {
     }
 
     subscribeToEvents() {
-        pubSub.subscribe(pubSub.TOPICS.SHOW_ERROR_NOTIFICATION, (message) => {
-            this.show(message);
+        pubSub.subscribe(pubSub.TOPICS.SHOW_ERROR_NOTIFICATION, (message, callbackFn = null) => {
+            this.notificationElement.classList.add("error");
+            this.show(message, callbackFn);
+        });
+
+        pubSub.subscribe(pubSub.TOPICS.SHOW_SUCCESS_NOTIFICATION, (message, callbackFn = null) => {
+            this.notificationElement.classList.add("success");
+            this.show(message, callbackFn);
         });
     }
 
-    show(message) {
+    show(message, callbackFn = null) {
         const noticationTemplate = buildNotificationView(message);
 
         this.notificationElement.innerHTML = noticationTemplate;
@@ -23,6 +29,9 @@ export class NotificationController {
 
         closeButtonelement.addEventListener("click", () => {
             this.notificationElement.innerHTML = "";
+            if (callbackFn) {
+                callbackFn();
+            }
         });
     }
 }

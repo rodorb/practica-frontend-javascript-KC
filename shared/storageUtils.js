@@ -10,11 +10,11 @@ export function getLocalStorageParsedItem(itemName) {
 
 
 export function setSessionStorageParsedItem(itemName, itemValue) {
-    sessionStorage.setItem(itemName, JSON.stringify(itemValue));
+    sessionStorage.setItem(itemName, typeof itemValue === 'string' ? itemValue : JSON.stringify(itemValue));
 }
 
 export function setLocalStorageParsedItem(itemName, itemValue) {
-    localStorage.setItem(itemName, JSON.stringify(itemValue));
+    localStorage.setItem(itemName, typeof itemValue === 'string' ? itemValue : JSON.stringify(itemValue));
 }
 
 function parseStorageItem(item) {

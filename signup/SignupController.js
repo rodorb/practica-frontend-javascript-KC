@@ -1,5 +1,5 @@
 import { userService } from "../shared/services/UserService.js";
-import { onAnyInputChanges, publishErrorNotification } from "../shared/utils.js";
+import { displaySpinner, onAnyInputChanges, publishErrorNotification, removeSpinner } from "../shared/utils/utils.js";
 
 export class SignupController {
     constructor(sigunpFormElement) {
@@ -56,11 +56,17 @@ export class SignupController {
     }
 
     async createUser(username, passwordInput) {
+        const buttonElement = this.sigunpFormElement.querySelector("button");
+        buttonElement.classList.add("hidden");
+        displaySpinner(this.sigunpFormElement);
         try {
             await userService.createUser(username, passwordInput);
             this.loginUser(username, passwordInput);
         } catch (error) {
             publishErrorNotification(error);
+        } finally {
+            removeSpinner(this.sigunpFormElement);
+            buttonElement.classList.remove("hidden");
         }
     }
 

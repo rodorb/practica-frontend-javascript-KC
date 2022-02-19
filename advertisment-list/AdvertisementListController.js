@@ -1,5 +1,5 @@
 import AdvertisementService from "../shared/services/AdvertisementService.js";
-import { displaySpinner, publishErrorNotification, removeSpinner } from "../shared/utils.js";
+import { displaySpinner, publishErrorNotification, removeSpinner } from "../shared/utils/utils.js";
 import { buildAdvertisementView } from "./AdvertisementView.js";
 
 export class AdvertisementListController {

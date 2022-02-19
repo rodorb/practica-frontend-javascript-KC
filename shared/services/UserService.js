@@ -46,11 +46,15 @@ class UserService {
         }
 
         const token = data.accessToken;
-        setLocalStorageParsedItem("jwt", token);
+        setLocalStorageParsedItem('jwt', token);
     }
 
     getLoggedUser() {
-        return getLocalStorageParsedItem("jwt");
+        return getLocalStorageParsedItem('jwt');
+    }
+
+    removeUserToken() {
+        localStorage.removeItem('jwt');
     }
 }
 

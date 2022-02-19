@@ -7,9 +7,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Advertisement</title>
+    <link rel="stylesheet" href="./shared/spinner/spinner.css" />
+    <link rel="stylesheet" href="./shared/notification/notification.css" />
+    <link rel="stylesheet" href="./general-styles.css">
 </head>
 
 <body>
+    <header>
+        <ul>
+            <li><a href="/">HOME </a></li>
+        </ul>
+    </header>
+    <section class="notification"></section>
+    <section>
+        <form id="loginForm">
+            <fieldset>
+                <legend>Crear anuncio</legend>
+                <div>
+                    <label for="productName">Nombre del producto: </label>
+                    <input type="text" name="productName" id="productName" required />
+                </div>
+                <div>
+                    <label for="image">Imagen del producto: </label>
+                    <input type="text" name="image" id="image" value="https://www.apconetforum.org/eweb/images/DEMO1/notavailable.jpg" />
+                </div>
+                <div>
+                    <label for="shortDescription">Descripción corta: </label>
+                    <input type="text" name="shortDescription" id="shortDescription" required />
+                </div>
+                <div>
+                    <label for="longDescription">Descripción larga:</label>
+                    <textarea id="longDescription" name="longDescription" rows="4" cols="50" placeholder="Inserta una descripción larga del product a anunciar...." required>
+                </textarea>
+                </div>
+                <div>
+                    <label for="price">Precio: </label>
+                    <input name="price" id="price" type="number" min="0.00" max="10000000.00" step="0.01" required/>
+                </div>
+                <div>
+                    <label for="forSale">Tipo de anuncio: </label>
+                    <select id="forSale" name="forSale" required>
+                        <option value="compra">Compra</option>
+                        <option value="venta">Venta</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" disabled>Crear</button>
+            </fieldset>
+
+        </form>
+    </section>
+
+    <script type="module" src="./shared/header/header.js"></script>
+    <script type="module" src="./advertisement-creation/createAdvertisement.js"></script>
 
 </body>
 

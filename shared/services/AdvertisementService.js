@@ -1,7 +1,12 @@
 import { transformAdvertisement } from "../responseTransformers/AdvertisementTransformer.js";
 import { ENDPOINTS } from "./apiUrls.js";
+import { userService } from "./UserService.js";
 
 class AdvertisementService {
+    METHODS = {
+        POST: 'POST',
+        DELETE: 'DELETE'
+    }
     constructor() {}
 
     async getAdvertisements() {
@@ -52,7 +57,42 @@ class AdvertisementService {
     }
 
     async createAdvertisment(body) {
+        let response;
+        try {
+            response = await fetch(ENDPOINTS.advertisementAPI, {
+                method: this.METHODS.POST,
+                body: JSON.stringify(body),
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${userService.getLoggedUser()}`,
+                },
+            });
+        } catch (error) {
+            throw new Error("No se ha podido crear el anuncio");
+        }
 
+        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
+    }
+
+    async deleteAdvertisement(id) {
+        let response;
+        try {
+            response = await fetch(`${ENDPOINTS.advertisementAPI}/${id}`, {
+                method: this.METHODS.DELETE,
+                headers: {
+                    "Authorization": `Bearer ${userService.getLoggedUser()}`,
+                },
+            });
+        } catch (error) {
+            throw new Error("No se ha podido borrar el anuncio");
+        }
+
+        if (!response.ok) {
+            throw new Error("Anuncio no encontrado");
+        }
     }
 
 }
