@@ -1,5 +1,8 @@
 # practica-frontend-javascript-KC
-
+- Para arrancar la aplicación usar el comando npm run start
+- Se incluye archivo db.json
+- Si se tiene adblock activado en el navegador, deshabilitarlo para  localhost:8080 ya que si no, no cargan los scripts
+- Por falta de tiempo solo se incluye la funcioanlidad mínima
 # Credenciales usuarios
 Ambos usuarios en db.json tienen como contraseña 12345
 
