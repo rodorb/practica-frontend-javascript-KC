@@ -56,7 +56,7 @@ export class CreateAdvertisementController {
         displaySpinner(this.createAdvertismentFormElement);
         try {
             await AdvertisementService.createAdvertisment(body);
-            publishSuccessNotification('Anuncio creado correctamente', () => { location.href = '/' });
+            publishSuccessNotification('Anuncio creado correctamente');
         } catch (error) {
             publishErrorNotification(error)
         } finally {

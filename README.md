@@ -2,7 +2,7 @@
 
 
 {
-    "photo": null,
+    "photo": "https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg",
     "name": "Xbox Series X",
     "description": "Microsoft 9th generation console",
     "longDescription": "Lorem ipsum..............",

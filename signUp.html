@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/generic-form.css">
 
 
     <title>Registro</title>
@@ -24,11 +25,12 @@
         <ul>
         </ul>
     </header>
-    <section class="notification"></section>
+
 
     <main>
-        <div class="notification"></div>
+        <h1>Registro</h1>
         <section class="formElement">
+
             <form id="signupForm">
                 <div>
                     <label for="textInput">Usuario: </label>
@@ -41,13 +43,15 @@
                 </div>
 
                 <div>
-                    <label for="passwordMatchInput">Contraseña: </label>
+                    <label for="passwordMatchInput">Confirma Contraseña: </label>
                     <input type="password" name="passwordMatchInput" id="passwordMatchInput" placeholder="repite la contraseña" required />
                 </div>
 
-                <button disabled type="submit">Crear usuario</button>
+                <button class="submit-btn" disabled type="submit">Crear usuario</button>
             </form>
         </section>
+        <div class="notification"></div>
+
     </main>
 
     <script type="module" src="./signup/signup.js"></script>

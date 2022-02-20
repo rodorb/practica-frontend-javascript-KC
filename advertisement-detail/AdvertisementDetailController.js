@@ -55,10 +55,10 @@ export class AdvertisementDetailController {
     drawDeleteButton() {
         const buttonElement = document.createElement("button");
         buttonElement.textContent = "Borrar Anuncio";
-
+        buttonElement.classList.add("submit-btn");
         this.advertisementDetailElement.appendChild(buttonElement);
 
-        this.advertisementDetailElement.addEventListener("click", () => {
+        buttonElement.addEventListener("click", () => {
             this.deleteAd();
         });
     }

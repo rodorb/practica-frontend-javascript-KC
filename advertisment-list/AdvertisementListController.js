@@ -20,7 +20,10 @@ export class AdvertisementListController {
                     this.advertisementsElement.appendChild(advertisementDivElement);
                 });
             } else {
-                publishErrorNotification('No existen anuncios disponibles.');
+                const noContentElement = document.createElement('p');
+                noContentElement.classList.add('no-data');
+                noContentElement.textContent = 'No existen anuncios disponibles...';
+                this.advertisementsElement.appendChild(noContentElement);
             }
         } catch (error) {
             publishErrorNotification('Se ha producido un error al recuperar anuncios.');
