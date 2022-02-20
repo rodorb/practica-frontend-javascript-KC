@@ -1,5 +1,9 @@
 # practica-frontend-javascript-KC
 
+# Credenciales usuarios
+Ambos usuarios en db.json tienen como contraseña 12345
+
+# Ejemplos de peticiones para poner en los formularios de creacion
 
 {
     "photo": "https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg",
