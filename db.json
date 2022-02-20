@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "username": "rodolfo",
+      "password": "$2b$10$p67lwI6p5./6LSfw80/wAeqMdszK7sIBlPxYNlo49LB7LjzUbad0q",
+      "id": 1
+    },
+    {
+      "username": "12345",
+      "password": "$2b$10$p67lwI6p5./6LSfw80/wAeqMdszK7sIBlPxYNlo49LB7LjzUbad0q",
+      "id": 2
+    }
+  ],
+  "advertisements": [
+    {
+      "photo": "https://media.revistagq.com/photos/6048a391d1187a598fb4965e/3:2/w_3198,h_2132,c_limit/Comprar-PS5.png",
+      "name": "Playstation 5",
+      "description": "Playstation 9th generation console",
+      "longDescription": "Lorem ipsum..............                ",
+      "price": "500",
+      "forSale": true,
+      "priceUnit": "€",
+      "userId": 1,
+      "updatedAt": "2022-02-20T00:57:34.490Z",
+      "id": 1
+    },
+    {
+      "photo": "https://mynintendostore.nintendo.es/media/catalog/product/cache/b4cb1f58b4f6fb6dd00a79cd43d6b8db/1/0/10002207-1-nswitchhwneonbluered-h2x1.jpg",
+      "name": "Nintendo Switch",
+      "description": "Nintendo 8th generation videogame console",
+      "longDescription": "The nintendo Switch is the latest Nintendo console released in 2019, it is one of Nintendo's most successful videogame console in history                ",
+      "price": "299.99",
+      "forSale": true,
+      "priceUnit": "€",
+      "userId": 1,
+      "updatedAt": "2022-02-20T00:58:51.231Z",
+      "id": 2
+    },
+    {
+      "photo": "https://compass-ssl.xbox.com/assets/b9/0a/b90ad58f-9950-44a7-87fa-1ee8f0b6a90e.jpg?n=XSX_Page-Hero-0_768x792.jpg",
+      "name": "Xbox Series X",
+      "description": "Nintendo 8th generation videogame console",
+      "longDescription": "The nintendo Switch is the latest Nintendo console released in 2019, it is one of Nintendo's most successful videogame console in history                ",
+      "price": "599.99",
+      "forSale": false,
+      "priceUnit": "€",
+      "userId": 1,
+      "updatedAt": "2022-02-20T01:00:15.796Z",
+      "id": 3
+    },
+    {
+      "photo": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-mini-red-select-2020?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1604343707000",
+      "name": "Prueba",
+      "description": "prueba",
+      "longDescription": "pruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebapruebaprueba               ",
+      "price": "9999999.99",
+      "forSale": true,
+      "priceUnit": "€",
+      "userId": 2,
+      "updatedAt": "2022-02-20T01:04:26.453Z",
+      "id": 4
+    }
+  ]
+}
